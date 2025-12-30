@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FaceExtraction</class>
+ <widget class="QMainWindow" name="FaceExtraction">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>智慧视觉课堂考勤系统</string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+
+    <!-- 标题 -->
+    <item>
+     <widget class="QLabel" name="labelTitle">
+      <property name="font">
+       <font>
+        <family>黑体</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string>background-color:#1f3c88;color:white;</string>
+      </property>
+      <property name="text">
+       <string>智慧视觉课堂考勤系统 · 人脸采集</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+
+    <!-- 主体 -->
+    <item>
+     <layout class="QHBoxLayout" name="contentLayout">
+
+      <!-- 摄像头区域 -->
+      <item>
+       <widget class="QFrame" name="cameraPanel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred"/>
+        </property>
+        <property name="styleSheet">
+         <string>background-color:#111111;</string>
+        </property>
+
+        <layout class="QVBoxLayout" name="cameraLayout">
+         <property name="spacing">
+          <number>12</number>
+         </property>
+
+         <item>
+          <widget class="QLabel" name="labelCamera">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Ignored" vsizetype="Ignored"/>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>640</width>
+             <height>480</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color:black;border:2px solid #1f4fd8;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+
+         <item>
+          <widget class="QPushButton" name="btnCameraToggle">
+           <property name="styleSheet">
+            <string>background-color:#1f4fd8;color:white;border-radius:6px;font-size:14px;</string>
+           </property>
+           <property name="text">
+            <string>开启摄像头</string>
+           </property>
+          </widget>
+         </item>
+
+        </layout>
+       </widget>
+      </item>
+
+      <!-- 右侧信息区 -->
+      <item>
+       <widget class="QFrame" name="infoPanel">
+        <property name="styleSheet">
+         <string>background-color:#f5f7fb;</string>
+        </property>
+
+        <layout class="QVBoxLayout" name="infoLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+
+         <item><widget class="QLabel" name="labelCourse"><property name="text"><string>课程号：</string></property></widget></item>
+         <item><widget class="QLabel" name="labelWeek"><property name="text"><string>周次：</string></property></widget></item>
+         <item><widget class="QLabel" name="labelStatus"><property name="styleSheet"><string>color:#1f4fd8;</string></property><property name="text"><string>状态：等待识别</string></property></widget></item>
+
+      
+
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation"><enum>Qt::Orientation::Vertical</enum></property>
+           <property name="sizeHint" stdset="0"><size><width>20</width><height>200</height></size></property>
+          </spacer>
+         </item>
+
+         <!-- 进入考勤 -->
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QPushButton" name="btnCollectFace">
+           <property name="sizePolicy"><sizepolicy hsizetype="Minimum" vsizetype="Fixed"/></property>
+           <property name="minimumWidth"><number>200</number></property>
+           <property name="minimumHeight"><number>44</number></property>
+           <property name="styleSheet">
+            <string>
+             background-color:#5cb85c;
+             color:white;
+             border-radius:8px;
+             font-size:15px;
+             padding-left:24px;
+             padding-right:24px;
+            </string>
+           </property>
+           <property name="text"><string>课堂考勤</string></property>
+          </widget>
+         </item>
+
+         <!-- 结束采集 -->
+         <item alignment="Qt::AlignmentFlag::AlignHCenter">
+          <widget class="QPushButton" name="btnStop">
+           <property name="sizePolicy"><sizepolicy hsizetype="Minimum" vsizetype="Fixed"/></property>
+           <property name="minimumWidth"><number>200</number></property>
+           <property name="minimumHeight"><number>44</number></property>
+           <property name="styleSheet">
+            <string>
+             background-color:#d9534f;
+             color:white;
+             border-radius:8px;
+             font-size:15px;
+             padding-left:24px;
+             padding-right:24px;
+            </string>
+           </property>
+           <property name="text"><string>结束采集</string></property>
+          </widget>
+         </item>
+
+        </layout>
+       </widget>
+      </item>
+
+     </layout>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FaceAttendanceSystemClass</class>
+
+ <widget class="QMainWindow" name="FaceAttendanceSystemClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>600</height>
+   </rect>
+  </property>
+
+  <property name="windowTitle">
+   <string>智慧视觉课堂考勤系统</string>
+  </property>
+
+  <!-- ================= 中央区域 ================= -->
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+
+    <!-- 顶部 Spacer -->
+    <item>
+     <spacer name="spacerTop">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint">
+       <size>
+        <width>20</width>
+        <height>80</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+
+    <!-- 系统标题 -->
+    <item>
+     <widget class="QLabel" name="labelTitle">
+      <property name="font">
+       <font>
+        <family>黑体</family>
+        <pointsize>30</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="text">
+       <string>智慧视觉课堂考勤系统</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- 标题与输入区间距 -->
+    <item>
+     <spacer name="spacerMid1">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+
+    <!-- ===== 输入区外层（水平居中，不拉伸） ===== -->
+    <item>
+     <layout class="QHBoxLayout" name="inputWrapper">
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+
+      <item>
+       <layout class="QVBoxLayout" name="inputLayout">
+        <property name="spacing">
+         <number>18</number>
+        </property>
+
+        <!-- 课程号 -->
+        <item>
+         <widget class="QLineEdit" name="lineEditCourse">
+          <property name="fixedWidth">
+           <number>340</number>
+          </property>
+          <property name="minimumHeight">
+           <number>36</number>
+          </property>
+          <property name="placeholderText">
+           <string>请输入课程号（如 CS101）</string>
+          </property>
+         </widget>
+        </item>
+
+        <!-- 周次 -->
+        <item>
+         <widget class="QComboBox" name="comboWeek">
+          <property name="fixedWidth">
+           <number>340</number>
+          </property>
+          <property name="minimumHeight">
+           <number>36</number>
+          </property>
+          <item><property name="text"><string>第1周</string></property></item>
+          <item><property name="text"><string>第2周</string></property></item>
+          <item><property name="text"><string>第3周</string></property></item>
+          <item><property name="text"><string>第4周</string></property></item>
+          <item><property name="text"><string>第5周</string></property></item>
+          <item><property name="text"><string>第6周</string></property></item>
+          <item><property name="text"><string>第7周</string></property></item>
+          <item><property name="text"><string>第8周</string></property></item>
+          <item><property name="text"><string>第9周</string></property></item>
+          <item><property name="text"><string>第10周</string></property></item>
+          <item><property name="text"><string>第11周</string></property></item>
+          <item><property name="text"><string>第12周</string></property></item>
+          <item><property name="text"><string>第13周</string></property></item>
+          <item><property name="text"><string>第14周</string></property></item>
+          <item><property name="text"><string>第15周</string></property></item>
+          <item><property name="text"><string>第16周</string></property></item>
+          <item><property name="text"><string>第17周</string></property></item>
+          <item><property name="text"><string>第18周</string></property></item>
+         </widget>
+        </item>
+
+        <!-- 进入系统 -->
+        <item>
+         <widget class="QPushButton" name="btnEnter">
+          <property name="fixedWidth">
+           <number>220</number>
+          </property>
+          <property name="minimumHeight">
+           <number>44</number>
+          </property>
+          <property name="text">
+           <string>进入系统</string>
+          </property>
+         </widget>
+        </item>
+
+       </layout>
+      </item>
+     </layout>
+    </item>
+
+    <!-- 底部 Spacer -->
+    <item>
+     <spacer name="spacerBottom">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint">
+       <size>
+        <width>20</width>
+        <height>80</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+
+   </layout>
+  </widget>
+
+  <!-- 菜单 & 状态栏（保留，后续主界面用） -->
+  <widget class="QMenuBar" name="menuBar"/>
+  <widget class="QStatusBar" name="statusBar"/>
+
+ </widget>
+
+ <resources>
+  <include location="FaceAttendanceSystem.qrc"/>
+ </resources>
+
+ <connections/>
+</ui>
