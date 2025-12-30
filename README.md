@@ -14,5 +14,5 @@
 ## 构建环境
 - Windows 11
 - MSVC 2022
-- OpenCV 4.
-- Qt 6.10
+- OpenCV 4.12.0
+- Qt 6.10.1
