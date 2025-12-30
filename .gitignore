@@ -1,0 +1,27 @@
+# ===== Visual Studio =====
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+
+# ===== Build Output =====
+x64/
+Debug/
+Release/
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.obj
+*.lib
+
+# ===== Qt generated =====
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# ===== Database =====
+data/*.db
+
+# ===== OpenCV models =====
+*.yml
